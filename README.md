@@ -72,6 +72,8 @@ a- In order to make things easier just create an endpoint that will receive the 
 
 To see the results you can create a simple website and store it in a S3 bucket, here some results.
 
+In the website code remember to replace the endpoint part of the code.
+
 ![Result 1](images/Result1.png)
 
 ![Result 2](images/Result2.png)
