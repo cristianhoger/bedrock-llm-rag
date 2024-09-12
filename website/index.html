@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Sender</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        async function sendMessage() {
+            const message = document.getElementById('message').value;
+            const responseBox = document.getElementById('response');
+            const loadingIndicator = document.getElementById('loading');
+
+            // Mostrar el indicador de carga
+            loadingIndicator.style.display = 'block';
+            responseBox.innerText = '';
+
+            try {
+                const response = await fetch('YOUR END POINT', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ texto: message })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await response.text();  // Obtener la respuesta como texto
+                try {
+                    const jsonData = JSON.parse(data);  // Intentar analizar el texto como JSON
+                    responseBox.innerText = jsonData;  // Acceder directamente al string devuelto
+                } catch (e) {
+                    throw new Error('Invalid JSON response');
+                }
+            } catch (error) {
+                responseBox.innerText = 'Error: ' + error.message;
+            } finally {
+                // Ocultar el indicador de carga
+                loadingIndicator.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Send a Message</h1>
+    <textarea id="message" rows="4" cols="50" placeholder="Write your message here..."></textarea><br>
+    <button onclick="sendMessage()">Send</button>
+    <h2>Response:</h2>
+    <div id="loading">Loading...</div>
+    <div id="response"></div>
+</body>
+</html>
