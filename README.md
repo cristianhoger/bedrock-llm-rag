@@ -9,7 +9,7 @@ Services used:
 - API Gateway -> Publish the post endpoint to execute the Lambda function.
 - Pinecone -> Vector database utilized to store the embeddings in order to provide RAG to the LLM model.
   
-![Architecture Diagram](Bedrock-agent.drawio.svg)
+![Architecture Diagram](images/Bedrock-agent.drawio.svg)
 
 # 1- Creation of the Vector Database
 In order to store the embeddings, it is necessary to use what is called a vector database, here some insights:
