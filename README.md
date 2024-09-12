@@ -17,6 +17,8 @@ In order to store the embeddings, it is necessary to use what is called a vector
 
 a- Create an Index: Here the main part is the configuration, where you need to define the dimensions of the database. Luckily Pinecone has a wizard where you select the model that you will use for the embeddings.
 
+![Pinecone Wizard](images/Pinecone%20dimension.png)
+
 b- Select cloud provider: Straightforward, for this example select AWS.
 
 c- Select Regions: For this example we will use us-east-1.
