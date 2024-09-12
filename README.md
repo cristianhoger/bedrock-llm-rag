@@ -36,11 +36,19 @@ b- Now you need assing the IAM permissions, the easiest to select create and use
 
 c- Next you can select details of the data source, one important part is the data deletion policy, I select retain so I can delete knowledge bases independant from the vector data base.
 
+![Data Source Creation](images/2%20kb%201.png)
+
 d- In the step 3 you must select the model for the embeddings, make sure that the vector dimensions is the same as the dimensions of the vector database in Pinecone.
+
+![Embeddings Model](images/2%20kb%202.png)
 
 e- Still in step 3, provide the endpoint URL of the vector data base, and the ARN of the stored secret. 
 
+![Secret Creation](images/2%20kb%20e%202.png)
+
 f- When the data source is created, select and press the sync button, with that the embeddings will be created.
+
+
 
 # 3- Agent Creation
 
