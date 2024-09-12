@@ -62,7 +62,7 @@ a- For this example we will create a code in python to send the request to the B
 
 b- Make sure that you replace the agent ID and alias ID in the code.
 
-https://github.com/cristianhoger/bedrock-rag-agent/blob/6570a13afce7e113ddd83ffcc60ece415920ed39/lambda_function.py#L1-L75
+https://github.com/cristianhoger/bedrock-llm-rag/blob/6570a13afce7e113ddd83ffcc60ece415920ed39/lambda_function.py#L1-L75
 
 # 5- Create the API Gateway endpoint
 
