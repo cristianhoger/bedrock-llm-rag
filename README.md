@@ -68,7 +68,11 @@ https://github.com/cristianhoger/bedrock-llm-rag/blob/e56770783b1100b715ab92a89c
 
 a- In order to make things easier just create an endpoint that will receive the request in the body and call the Lambda function.
 
+# 6- Results
 
+To see the results you can create a simple website and store it in a S3 bucket, here some results.
 
+![Result 1](images/Result1.png)
 
+![Result 2](images/Result2.png)
 
